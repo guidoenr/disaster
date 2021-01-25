@@ -1,0 +1,10 @@
+$ lsblk 
+# shows al the devices, commonly sda is the USB device
+
+$ fdisk -l 
+# an alternative 
+
+$ sudo dd if=/dev/zero of=/dev/{usb_name} bs=4096 status=progress
+# progressive format to the usb, usb_name= must be 'sda'.. this command copies 
+# zeroes to the USB to override the blocks of the usb file systems with "0000"
+# the bs=4096 means a disk-to-disk duplication
