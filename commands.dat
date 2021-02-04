@@ -1,0 +1,8 @@
+#~: show all the active connections
+nmcli con show --active
+
+#~: show all the actove connections for vpn
+nmcli con show --active | grep -i vpn
+
+#~: search by string, in this example im searching files with the .dat extension
+ls | grep .dat
